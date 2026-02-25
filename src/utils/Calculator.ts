@@ -21,11 +21,11 @@ export function evaluate(a: string, op: Operator, b: string): string {
   switch (op) {
     case "+": result = numA + numB; break;
 
-    case "-": result = numA - numB; break;
+    case "−": result = numA - numB; break;
 
-    case "*": result = numA * numB; break;
+    case "×": result = numA * numB; break;
     
-    case "/":
+    case "÷":
       if (numB === 0) return "Error";
       result = numA / numB;
       break;
