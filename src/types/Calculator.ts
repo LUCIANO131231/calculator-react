@@ -1,4 +1,4 @@
-export type Operator = '+' | '-' | '*' | '/' | null;
+export type Operator = "+" | "−" | "×" | "÷" | null;
 
 export type AngleMode = 'DEG' | 'RAD';
 
