@@ -79,7 +79,8 @@ export function useCalculator() {
 
       return {
         ...s,
-        prevValue: op,
+        prevValue: s.display,
+        operator: op,
         expression: `${s.display} ${op}`,
         waiting: true,
         justCalc: false,
@@ -92,8 +93,9 @@ export function useCalculator() {
     setState((s) => {
       if (!s.operator || s.prevValue === null || s.isError) return s;
 
-      const result = evaluate(s.prevValue, s.operator, s.display);
-      const expr = `${s.prevValue} ${s.operator} ${s.display}`;
+      const secondValue = s.waiting ? s.prevValue : s.display;
+      const result = evaluate(s.prevValue, s.operator, secondValue);
+      const expr = `${s.prevValue} ${s.operator} ${secondValue}`;
 
       if (result === "Error") {
         return { ...s, display: "Error", expression: `${expr} =`, isError: true};
