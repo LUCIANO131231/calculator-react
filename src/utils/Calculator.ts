@@ -1,4 +1,4 @@
-import type { AngleMode, Operator } from "../types/Calculator";
+import type { AngleMode, Operator } from "@/types/Calculator";
 
 // formatear numero en pantalla
 export function formatDisplay(value: string): string {

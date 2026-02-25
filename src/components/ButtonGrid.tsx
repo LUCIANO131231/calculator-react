@@ -1,10 +1,10 @@
 import { useCallback, useState } from "react";
-import type { AngleMode } from "../types/Calculator";
-
+import type { AngleMode } from "@/types/Calculator";
+import type { Operator } from "@/types/Calculator";
 
 interface ButtonGridProps {
   onDigit: (d: string) => void;
-  onOperator: (op: any) => void;
+  onOperator: (op: Operator) => void;
   onCalculate: () => void;
   onClear: () => void;
   onBackspace: () => void;
@@ -166,7 +166,7 @@ export default function ButtonGrid({
   const handlePress = useCallback((config: BtnConfig) => {
     switch (config.action) {
       case "digit":       return onDigit(config.label);
-      case "op":          return onOperator(config.label);
+      case "op":          return onOperator(config.label as Operator);
       case "calc":        return onCalculate();
       case "clear":       return onClear();
       case "backspace":   return onBackspace();

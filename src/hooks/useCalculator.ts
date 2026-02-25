@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
-import type { CalculatorState, Operator } from "../types/Calculator";
-import { applyScientific, evaluate } from "../utils/Calculator";
+import type { CalculatorState, Operator } from "@/types/Calculator";
+import { applyScientific, evaluate } from "@/utils/Calculator";
 
 
 const initialState: CalculatorState = {

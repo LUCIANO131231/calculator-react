@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useCalculator } from "../hooks/useCalculator";
-import ButtonGrid from "./ButtonGrid";
-import Display from "./Display";
-import HistoryPanel from "./HistoryPanel";
+import { useCalculator } from "@/hooks/useCalculator";
+import ButtonGrid from "@/components/ButtonGrid";
+import Display from "@/components/Display";
+import HistoryPanel from "@/components/HistoryPanel";
 
 
 export default function Calculator() {
